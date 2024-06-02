@@ -1,0 +1,2 @@
+Weaving configuration: EXEC,CALL,FIELD,ARRAY,SYNC,LABEL,PARAM,LOCAL,OBJECT,LINE
+Selected File Format: TextStream
