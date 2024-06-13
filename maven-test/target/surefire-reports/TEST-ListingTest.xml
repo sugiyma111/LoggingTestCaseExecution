@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="ListingTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="ListingTest" time="0.014" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.11+9-Ubuntu-122.04.1"/>
@@ -39,7 +39,7 @@
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -DargLine=-Xmx2g -Xms512m -javaagent:../selogger-0.5.1.jar=format=omni,weaverlog=log.txt,output={time},weave=EXEC+CALL,e=org/junit,e=org/apache/maven,e=org/opentest4j test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -DargLine=-Xmx2g -Xms512m -javaagent:../selogger-0.5.1.jar=format=freq,weaverlog=log.txt,output={time},e=org/junit,e=org/apache/maven,e=opentest4j test"/>
     <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -55,9 +55,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.stdout.encoding" value="UTF-8"/>
-    <property name="argLine" value="-Xmx2g -Xms512m -javaagent:../selogger-0.5.1.jar=format=omni,weaverlog=log.txt,output={time},weave=EXEC+CALL,e=org/junit,e=org/apache/maven,e=org/opentest4j"/>
+    <property name="argLine" value="-Xmx2g -Xms512m -javaagent:../selogger-0.5.1.jar=format=freq,weaverlog=log.txt,output={time},e=org/junit,e=org/apache/maven,e=opentest4j"/>
   </properties>
-  <testcase classname="ListingTest" name="ListingTest.testImmutableList" time="0.001"/>
+  <testcase classname="ListingTest" name="ListingTest.testTrimString" time="0.014"/>
+  <testcase classname="ListingTest" name="ListingTest.testImmutableList" time="0"/>
   <testcase classname="ListingTest" name="ListingTest.testUppercaseList" time="0"/>
-  <testcase classname="ListingTest" name="ListingTest.testTrimString" time="0"/>
 </testsuite>

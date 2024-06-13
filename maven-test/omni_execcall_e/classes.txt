@@ -1,0 +1,2 @@
+ClassID,LoadedFrom,FileName,ClassName,LogLevel,ClassHash,ClassLoaderID
+0,file:/home/chanko/clone-LTCE/LoggingTestCaseExecution/maven-test/target/test-classes/,ListingTest,ListingTest,Normal,b3149eac0560a1bf49283f4c181788ce31ee4141,Loader@1dbd16a6:ListingTest
