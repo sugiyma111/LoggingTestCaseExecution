@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+import import com.example.
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -47,5 +48,11 @@ public class ListingTest {
         expected.add("CHERRY");
 
         assertEquals(expected, upperList, "The uppercase list should match the expected list.");
+    }
+
+    @Test
+    public void loadMain() {
+    	Listing classListing = new Listing();
+    	classListing.main(null);
     }
 }
