@@ -1,6 +1,6 @@
-import static org.junit.jupiter.api.Assertions.*;
-import import com.example.
+package com.example;
 
+import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -51,8 +51,7 @@ public class ListingTest {
     }
 
     @Test
-    public void loadMain() {
-    	Listing classListing = new Listing();
-    	classListing.main(null);
+    public void loadListingMain() {
+        Listing.main(null);
     }
 }
