@@ -51,7 +51,7 @@ public class ListingTest {
     }
 
     @Test
-    public void loadListingMain() {
+    public void testLoadMain() {
         Listing.main(null);
     }
 }

@@ -8,6 +8,8 @@ Excluded by name filter: org/apache/maven/surefire/booter/PropertiesWrapper
 Excluded by name filter: org/apache/maven/surefire/booter/KeyValueSource
 Excluded by name filter: java/lang/IllegalStateException
 Excluded by name filter: java/util/concurrent/ConcurrentHashMap$KeySetView
+Excluded by name filter: java/util/Collections$SynchronizedCollection
+Excluded by name filter: java/util/Collections$SynchronizedSet
 Excluded by name filter: java/util/concurrent/ConcurrentHashMap$KeyIterator
 Excluded by name filter: org/apache/maven/surefire/booter/BooterDeserializer
 Excluded by name filter: org/apache/maven/surefire/booter/BooterConstants
@@ -32,14 +34,12 @@ Excluded by name filter: org/apache/maven/surefire/booter/JdkReflector
 Excluded by name filter: java/lang/reflect/InvocationTargetException
 Excluded by name filter: java/lang/IllegalAccessException
 Excluded by name filter: org/apache/maven/surefire/util/ReflectionUtils
-Excluded by name filter: java/lang/InstantiationException
 Excluded by name filter: org/apache/maven/surefire/util/SurefireReflectionException
+Excluded by name filter: java/lang/InstantiationException
 Excluded by name filter: org/apache/maven/surefire/booter/StartupConfiguration
 Excluded by name filter: org/apache/maven/surefire/util/UrlUtils
 Excluded by name filter: java/io/UnsupportedEncodingException
 Excluded by name filter: java/util/BitSet
-Excluded by name filter: java/net/URLClassLoader$7
-Excluded by name filter: jdk/internal/misc/JavaNetURLClassLoaderAccess
 Excluded by name filter: org/apache/maven/surefire/booter/SurefireReflector
 Excluded by name filter: org/apache/maven/surefire/booter/TestArtifactInfoAware
 Excluded by name filter: org/apache/maven/surefire/booter/DirectoryScannerParametersAware
@@ -58,8 +58,8 @@ Excluded by name filter: org/apache/maven/surefire/report/ReporterException
 Excluded by name filter: org/apache/maven/surefire/testset/TestSetFailedException
 Excluded by name filter: org/apache/maven/surefire/booter/BaseProviderFactory
 Excluded by name filter: org/apache/maven/surefire/booter/RunOrderParametersAware
-Excluded by name filter: org/apache/maven/surefire/util/DirectoryScanner
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleLogger
+Excluded by name filter: org/apache/maven/surefire/util/DirectoryScanner
 Excluded by name filter: org/apache/maven/surefire/util/ScanResult
 Excluded by name filter: org/apache/maven/surefire/util/RunOrderCalculator
 Excluded by name filter: java/net/URLClassLoader$1
@@ -69,10 +69,11 @@ Excluded by name filter: java/net/URLConnection
 Excluded by name filter: sun/net/www/MessageHeader
 Excluded by name filter: java/io/FilePermission
 Excluded by name filter: java/io/FilePermission$1
-Excluded by name filter: jdk/internal/misc/JavaIOFilePermissionAccess
+Excluded by name filter: jdk/internal/access/JavaIOFilePermissionAccess
 Excluded by name filter: sun/security/util/FilePermCompat
 Excluded by name filter: sun/security/util/SecurityProperties
 Excluded by name filter: java/io/FilePermissionCollection
+Excluded by name filter: java/util/Vector
 Excluded by name filter: java/io/FilePermissionCollection$1
 Excluded by name filter: org/apache/maven/surefire/junit/JUnit3Provider
 Excluded by name filter: org/apache/maven/surefire/providerapi/AbstractProvider
@@ -89,20 +90,24 @@ Excluded by name filter: org/apache/maven/surefire/NonAbstractClassFilter
 Excluded by name filter: org/apache/maven/surefire/junit/PojoAndJUnit3Checker
 Excluded by name filter: org/apache/maven/surefire/booter/ProviderFactory$ProviderProxy
 Excluded by name filter: jdk/internal/loader/URLClassPath$FileLoader$1
-Weaving executed: Class=com/example/ListingTest, LoadedFrom=file:/home/sugiyma111/clone_LTCE/LoggingTestCaseExecution/maven-test/target/test-classes/, LogLevel=Normal, ClassHash=42340d86f0b58b261456a205e3041c9db9164324, ClassLoaderID=Loader@3d4eac69:com/example/ListingTest
+Weaving executed: Class=com/example/ListingTest, LoadedFrom=file:/home/chanko/clone-LTCE/LoggingTestCaseExecution/maven-test/target/test-classes/, LogLevel=Normal, ClassHash=3f006c69e3369c1f6ada8f28577951fa34c4ce01, ClassLoaderID=Loader@1dbd16a6:com/example/ListingTest
 Excluded by name filter: org/apache/maven/surefire/util/TestsToRun
 Excluded by name filter: java/util/Arrays$ArrayList
 Excluded by name filter: org/apache/maven/surefire/booter/ForkingRunListener
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleOutputReceiver
+Excluded by name filter: java/util/Properties$EntrySet
 Excluded by name filter: java/util/Hashtable$Enumerator
 Excluded by name filter: org/apache/maven/surefire/util/internal/StringUtils
 Excluded by name filter: java/lang/NumberFormatException
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleOutputCapture
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleOutputCapture$ForwardingPrintStream
 Excluded by name filter: org/apache/maven/surefire/report/StackTraceWriter
+Excluded by name filter: java/lang/Class$1
 Excluded by name filter: selogger/logging/util/ThreadId
 Excluded by name filter: selogger/logging/util/ThreadId$1
 Excluded by name filter: java/nio/charset/StandardCharsets
+Excluded by name filter: sun/nio/cs/US_ASCII
+Excluded by name filter: sun/nio/cs/ISO_8859_1
 Excluded by name filter: sun/nio/cs/UTF_16BE
 Excluded by name filter: sun/nio/cs/UTF_16LE
 Excluded by name filter: sun/nio/cs/UTF_16
@@ -115,6 +120,12 @@ Excluded by name filter: org/junit/jupiter/api/Assertions
 Excluded by name filter: org/junit/jupiter/api/AssertEquals
 Excluded by name filter: org/junit/jupiter/api/AssertionUtils
 Excluded by name filter: org/opentest4j/AssertionFailedError
+Weaving executed: Class=com/example/Listing, LoadedFrom=file:/home/chanko/clone-LTCE/LoggingTestCaseExecution/maven-test/target/classes/, LogLevel=Normal, ClassHash=cc0cd045dc51cb270941f8f668239cae94dd993f, ClassLoaderID=Loader@1dbd16a6:com/example/Listing
+Excluded by name filter: java/lang/invoke/MethodHandleImpl$AsVarargsCollector
+Excluded by name filter: java/lang/invoke/BoundMethodHandle$Species_LL
+Excluded by name filter: selogger/com/fasterxml/jackson/core/io/JsonStringEncoder
+Excluded by name filter: selogger/com/fasterxml/jackson/core/io/CharTypes
+Excluded by name filter: org/apache/maven/surefire/util/internal/ByteBuffer
 Excluded by name filter: org/apache/maven/surefire/booter/ForkedBooter$1
 Excluded by name filter: java/util/IdentityHashMap$IdentityHashMapIterator
 Excluded by name filter: java/util/IdentityHashMap$KeyIterator
