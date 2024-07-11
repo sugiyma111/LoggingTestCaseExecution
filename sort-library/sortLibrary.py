@@ -1,25 +1,31 @@
 import pandas as pd
 
-#CSVファイルのパス
-csv_methods = 'methods.csv'
-csv_dataids = 'dataids.csv'
+#ファイルの読み込み
+methods_df = pd.read_csv('methods.csv')
+dataids_df = pd.read_csv('dataids.csv')
+log_df = pd.read_csv('log-00001.csv')
 
-#csvの読み込み
-methods_df = pd.read_csv(csv_methods)
-dataids_df = pd.read_csv(csv_dataids)
+#辞書の作成(key:メソッド名 value:メソッドIDのリスト)
+methodNameID_dict = {}
+current_method = None
 
-#ライブラリを読み込んでいる行を抜き出す
-dataids_df['Library'] = dataids_df['Attributes'].str.extract(r'owner=([^,]+)')
-dataids_df = dataids_df.dropna(subset=['Library'])
+for index, row in methods_df.iterrows():
+    method_name = row['MethodName']
+    method_id = row['MethodID']
+    
+    #メソッド名がtestで始まるか
+    if method_name.startswith('test'):
+        #新しいtestメソッドのときにMethodIDのリストを初期化
+        current_method = method_name
+        methodNameID_dict[current_method] = [method_id]
+    else:
+        #testメソッドでないときMethodIDを現在のメソッドのリストに追加
+        if current_method:
+            methodNameID_dict[current_method].append(method_id)
 
-#必要なラベルを取り出す
-library_usage_df = dataids_df[['ClassID', 'MethodID', 'Library']]
+print(methodNameID_dict)
 
-#メソッドとライブラリのdfを左結合
-merged_df = pd.merge(methods_df, library_usage_df, on=['ClassID', 'MethodID'], how='left')
+#辞書の作成(key:メソッド名 value:ライブラリのリスト)
+methodNameLibrary_dict = {}
 
-method_library_usage = merged_df[['ClassName', 'MethodName', 'Library']].drop_duplicates().reset_index(drop=True)
-
-print(method_library_usage)
-
-method_library_usage.to_csv('./method_library_usage.csv', index=False)  
+dataids_df = dataids_df.dropna(subset=['Attributes'])
