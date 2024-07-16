@@ -4,7 +4,6 @@ import pandas as pd
 methods_df = pd.read_csv('methods.csv')
 dataids_df = pd.read_csv('dataids.csv')
 log_df = pd.read_csv('log-00001.csv', header=None)
-print(log_df)
 
 #辞書の作成(key:メソッド名 value:メソッドIDのリスト)
 methodNameID_dict = {}
@@ -44,8 +43,22 @@ print(methodIdLibrary_list)
 
 midDid_list = []
 method_id = 0
+mode = 0
 for row in log_df[1]:
-    if row == methodIdLibrary_list[method_id][1]
+    if mode == 0:
+        if row == methodIdLibrary_list[method_id][1]:
+            idList = []
+            idList.append(row)
+            mode = 1
+    if mode == 1:
+        if row == methodIdLibrary_list[method_id][2]:
+            method_id = method_id + 1
+            mode = 0
+            print(idList)
+            midDid_list.append(idList)
+        else:
+            idList.append(row)
+print(midDid_list)
         
 
 
