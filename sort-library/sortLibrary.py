@@ -3,7 +3,8 @@ import pandas as pd
 #ファイルの読み込み
 methods_df = pd.read_csv('methods.csv')
 dataids_df = pd.read_csv('dataids.csv')
-log_df = pd.read_csv('log-00001.csv')
+log_df = pd.read_csv('log-00001.csv', header=None)
+print(log_df)
 
 #辞書の作成(key:メソッド名 value:メソッドIDのリスト)
 methodNameID_dict = {}
@@ -25,7 +26,26 @@ for index, row in methods_df.iterrows():
 
 print(methodNameID_dict)
 
-#辞書の作成(key:メソッド名 value:ライブラリのリスト)
-methodNameLibrary_dict = {}
+#リストの作成(methodID, Entry地点のdataID, Exit地点のdataID)
+methodIdLibrary_list = []
 
 dataids_df = dataids_df.dropna(subset=['Attributes'])
+for index, row in dataids_df.iterrows():
+    index = 0
+    if row['EventType'] == 'METHOD_ENTRY':
+        idList = []
+        method_id = row['MethodID']
+        idList.append(method_id)
+        idList.append(row['DataID'])
+        methodIdLibrary_list.append(idList)
+    if row['EventType'] == 'METHOD_EXCEPTIONAL_EXIT':
+        methodIdLibrary_list[method_id].append(row['DataID'])
+print(methodIdLibrary_list)
+
+midDid_list = []
+method_id = 0
+for row in log_df[1]:
+    if row == methodIdLibrary_list[method_id][1]
+        
+
+
