@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import glob
+import csv
 
 #ファイルの読み込み
 methods_df = pd.read_csv('methods.csv')
@@ -87,3 +88,18 @@ for id in mid_did_list:
     mid_lname_list.append(work_list)
 
 print(mid_lname_list)
+
+# idと名前の辞書を作成
+id_name_dict = {item[0]: item[1] for item in mid_mname_list}
+
+# idを名前に変換したリストを作成
+mname_lname_list = [[id_name_dict[item[0]], item[1]] for item in mid_lname_list]
+
+# 結果を表示
+print(mname_lname_list)
+
+with open('name_to_libraries.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Name', 'Libraries']) 
+    for name, libraries in mname_lname_list:
+        writer.writerow([name, ', '.join(libraries)]) 

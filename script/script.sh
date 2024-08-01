@@ -49,5 +49,5 @@ for file in *.txt; do
 done
 
 # ライブラリ抽出のプログラムを実行
-cd $current_dir
-python3 sortLibrary.py $new_dir
+cd $new_dir
+python3 ../sortLibrary.py $new_dir

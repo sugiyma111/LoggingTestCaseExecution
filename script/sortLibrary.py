@@ -1,32 +1,16 @@
 import pandas as pd
 import re
 import glob
-import sys
-import os
+import csv
 
-# 引数からディレクトリを取得
-if len(sys.argv) != 2:
-    print("Usage: python sortLibrary.py <directory>")
-    sys.exit(1)
-
-directory = sys.argv[1]
-
-# ディレクトリが存在するかチェック
-if not os.path.isdir(directory):
-    print(f"Error: Directory {directory} does not exist.")
-    sys.exit(1)
-
-# ディレクトリ内のファイルパスを作成
-methods_file = os.path.join(directory, 'methods.csv')
-dataids_file = os.path.join(directory, 'dataids.csv')
-
-# ファイルの読み込み
-methods_df = pd.read_csv(methods_file)
-dataids_df = pd.read_csv(dataids_file)
+#ファイルの読み込み
+methods_df = pd.read_csv('methods.csv')
+dataids_df = pd.read_csv('dataids.csv')
 
 # "log"で始まるすべてのファイルを読み込む
-log_files = sorted(glob.glob(os.path.join(directory, 'log*.csv')))
+log_files = sorted(glob.glob('log*.csv'))
 log_df_list = [pd.read_csv(log_file, header=None) for log_file in log_files]
+print(log_df_list)
 
 # リストの作成(MethodID, MethodName)
 mid_mname_list = []
@@ -104,3 +88,18 @@ for id in mid_did_list:
     mid_lname_list.append(work_list)
 
 print(mid_lname_list)
+
+# idと名前の辞書を作成
+id_name_dict = {item[0]: item[1] for item in mid_mname_list}
+
+# idを名前に変換したリストを作成
+mname_lname_list = [[id_name_dict[item[0]], item[1]] for item in mid_lname_list]
+
+# 結果を表示
+print(mname_lname_list)
+
+with open('library-list.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(['Name', 'Libraries']) 
+    for name, libraries in mname_lname_list:
+        writer.writerow([name, ', '.join(libraries)]) 
