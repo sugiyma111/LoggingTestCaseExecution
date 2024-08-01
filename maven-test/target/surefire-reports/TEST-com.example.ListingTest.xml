@@ -57,8 +57,8 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="argLine" value="-Xmx4g -Xms1024m -javaagent:../selogger-0.5.1.jar=format=omni,weaverlog=log.txt,output={time},weave=EXEC+CALL,e=org/junit,e=org/apache/maven,e=org/opentest4j"/>
   </properties>
-  <testcase classname="com.example.ListingTest" name="com.example.ListingTest.testTrimString" time="0.001"/>
+  <testcase classname="com.example.ListingTest" name="com.example.ListingTest.testTrimString" time="0"/>
   <testcase classname="com.example.ListingTest" name="com.example.ListingTest.testImmutableList" time="0"/>
   <testcase classname="com.example.ListingTest" name="com.example.ListingTest.testUppercaseList" time="0"/>
-  <testcase classname="com.example.ListingTest" name="com.example.ListingTest.testLoadMain" time="0.009"/>
+  <testcase classname="com.example.ListingTest" name="com.example.ListingTest.testLoadMain" time="0.01"/>
 </testsuite>

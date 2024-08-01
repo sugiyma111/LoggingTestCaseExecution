@@ -1,0 +1,3 @@
+2,27,"Trimmed String: hello world"
+3,39,"Immutable List: [apple, banana, cherry]"
+4,39,"Uppercase List: [APPLE, BANANA, CHERRY]"
