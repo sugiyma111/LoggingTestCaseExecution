@@ -23,7 +23,7 @@ fi
 cd $dir2
 
 # 選択したディレクトリでテスト実行
-mvn -DargLine="-Xmx4g -Xms1024m -javaagent:../selogger-0.5.1.jar=format=omni,weaverlog=log.txt,output={time},weave=EXEC+CALL,e=org/junit,e=org/apache/maven,e=org/opentest4j" test
+mvn -DargLine="-Xmx8g -Xms2048m -javaagent:${current_dir}/selogger-0.5.1.jar=format=omni,weaverlog=log.txt,output={time},weave=EXEC+CALL,e=org/junit,e=org/apache/maven,e=org/opentest4j" test
 
 # 降順にした際に一番最初のディレクトリ(dir3)に移動する
 echo "Available directories:"

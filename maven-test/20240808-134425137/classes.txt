@@ -1,0 +1,3 @@
+ClassID,LoadedFrom,FileName,ClassName,LogLevel,ClassHash,ClassLoaderID
+0,file:/home/sugiyma111/clone_LTCE/LoggingTestCaseExecution/maven-test/target/test-classes/,com/example/ListingTest,com/example/ListingTest,Normal,ffbfa9219512f809aaba02363e9fe9ec7f46df90,Loader@3d4eac69:com/example/ListingTest
+1,file:/home/sugiyma111/clone_LTCE/LoggingTestCaseExecution/maven-test/target/classes/,com/example/Listing,com/example/Listing,Normal,c41a8f1f048894016550f6c76c25e5c65400816e,Loader@3d4eac69:com/example/Listing

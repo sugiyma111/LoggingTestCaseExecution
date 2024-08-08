@@ -1,5 +1,0 @@
-Name,Libraries
-testTrimString,"org/junit/jupiter/api/Assertions, java/lang/String"
-testImmutableList,"java/util/List, org/junit/jupiter/api/Assertions, java/util/ArrayList, java/util/Collections"
-testUppercaseList,"java/util/Iterator, java/util/List, org/junit/jupiter/api/Assertions, java/util/ArrayList, java/lang/String"
-testLoadMain,"java/util/Iterator, com/example/Listing, java/util/List, java/util/ArrayList, java/lang/String, java/util/Collections, java/io/PrintStream"
