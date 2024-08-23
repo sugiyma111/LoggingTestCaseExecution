@@ -1,0 +1,8 @@
+ClassID,MethodID,ClassName,MethodName,MethodDesc,Access,SourceFileName,MethodHash,VisibleAnnotations,InvisibleAnnotations
+0,0,com/example/ListingTest,<init>,()V,1,ListingTest.java,204b3c4dea2bb90b4b56dff35c6c2a032351043c,,
+0,1,com/example/ListingTest,testTrimString,()V,1,ListingTest.java,f1bc89651b267058d2c3748de58b2e2a28589b7a,org.junit.jupiter.api.Test,
+0,2,com/example/ListingTest,testImmutableList,()V,1,ListingTest.java,91969dd127fcc7a76fa8ecf3b9a335ab01d83df5,org.junit.jupiter.api.Test,
+0,3,com/example/ListingTest,testUppercaseList,()V,1,ListingTest.java,296957573a0fb142acc49d2a4c99320b8c11abe9,org.junit.jupiter.api.Test,
+0,4,com/example/ListingTest,testLoadMain,()V,1,ListingTest.java,055cde6359c18c5a76aec736b227926d31aaa24b,org.junit.jupiter.api.Test,
+1,5,com/example/Listing,<init>,()V,1,Listing.java,204b3c4dea2bb90b4b56dff35c6c2a032351043c,,
+1,6,com/example/Listing,main,([Ljava/lang/String;)V,9,Listing.java,fe51c5b1d797c98fcce706b9aa970bb9f713aa8c,,

@@ -81,8 +81,9 @@ for id in mid_did_list:
     for index, row in filtered_dataids_df.iterrows():
         if row['DataID'] in id[1]:
             match = re.search(r"owner=([\w/]+)", row['Attributes'])
-            library_name = match.group(1)
-            name_list.append(library_name)
+            if match:
+                library_name = match.group(1)
+                name_list.append(library_name)
     name_list = list(set(name_list))
     work_list.append(name_list)
     mid_lname_list.append(work_list)

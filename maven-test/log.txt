@@ -60,8 +60,8 @@ Excluded by name filter: org/apache/maven/surefire/booter/BaseProviderFactory
 Excluded by name filter: org/apache/maven/surefire/booter/RunOrderParametersAware
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleLogger
 Excluded by name filter: org/apache/maven/surefire/util/ScanResult
-Excluded by name filter: org/apache/maven/surefire/util/DirectoryScanner
 Excluded by name filter: org/apache/maven/surefire/util/RunOrderCalculator
+Excluded by name filter: org/apache/maven/surefire/util/DirectoryScanner
 Excluded by name filter: java/net/URLClassLoader$1
 Excluded by name filter: sun/net/www/protocol/file/FileURLConnection
 Excluded by name filter: sun/net/www/URLConnection
@@ -96,7 +96,6 @@ Excluded by name filter: org/apache/maven/surefire/booter/ForkingRunListener
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleOutputReceiver
 Excluded by name filter: java/util/Hashtable$Enumerator
 Excluded by name filter: org/apache/maven/surefire/util/internal/StringUtils
-Excluded by name filter: java/lang/NumberFormatException
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleOutputCapture
 Excluded by name filter: org/apache/maven/surefire/report/ConsoleOutputCapture$ForwardingPrintStream
 Excluded by name filter: org/apache/maven/surefire/report/StackTraceWriter
@@ -111,6 +110,10 @@ Excluded by name filter: java/lang/PublicMethods
 Excluded by name filter: java/lang/InterruptedException
 Excluded by name filter: java/util/LinkedHashMap$LinkedValues
 Excluded by name filter: java/util/LinkedHashMap$LinkedValueIterator
+Excluded by name filter: org/junit/jupiter/api/Assertions
+Excluded by name filter: org/junit/jupiter/api/AssertEquals
+Excluded by name filter: org/junit/jupiter/api/AssertionUtils
+Excluded by name filter: org/opentest4j/AssertionFailedError
 Weaving executed: Class=com/example/Listing, LoadedFrom=file:/home/sugiyma111/clone_LTCE/LoggingTestCaseExecution/maven-test/target/classes/, LogLevel=Normal, ClassHash=c41a8f1f048894016550f6c76c25e5c65400816e, ClassLoaderID=Loader@3d4eac69:com/example/Listing
 Excluded by name filter: java/lang/invoke/StringConcatFactory
 Excluded by name filter: java/lang/invoke/StringConcatFactory$Strategy
@@ -147,11 +150,8 @@ Excluded by name filter: java/lang/invoke/BoundMethodHandle$Species_LLLLLLIIL
 Excluded by name filter: selogger/com/fasterxml/jackson/core/io/JsonStringEncoder
 Excluded by name filter: selogger/com/fasterxml/jackson/core/io/CharTypes
 Excluded by name filter: org/apache/maven/surefire/util/internal/ByteBuffer
-Excluded by name filter: org/junit/jupiter/api/Assertions
-Excluded by name filter: org/junit/jupiter/api/AssertEquals
-Excluded by name filter: org/junit/jupiter/api/AssertionUtils
-Excluded by name filter: org/opentest4j/AssertionFailedError
 Excluded by name filter: org/apache/maven/surefire/booter/ForkedBooter$1
 Excluded by name filter: java/util/IdentityHashMap$IdentityHashMapIterator
 Excluded by name filter: java/util/IdentityHashMap$KeyIterator
 Excluded by name filter: java/io/FileOutputStream$1
+Elapsed time: 315ms
